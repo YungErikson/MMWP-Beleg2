@@ -7,28 +7,6 @@
     <!-- Bootstrap CSS einbinden -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        
-        /* Abstand für Seiteninhalt auf großen Bildschirmen */
-    @media (min-width: 992px) {
-        .content {
-            margin-left: 200px; /* Breite der Sidebar */
-        }
-    }
-
-    /* Kein Abstand auf kleineren Bildschirmen */
-    @media (max-width: 991.98px) {
-        .content {
-            margin-left: 0;
-        }
-    }
-
-    .sidebar {
-            position: fixed;
-            width: 200px;
-            height: 100vh;
-            overflow-y: auto; /* Scrollbar für die Sidebar */
-        }
-
         /* Zusätzliche Stile für klare Unterscheidbarkeit */
         #section1 { background-color: #007bff; color: white; }
         #section2 { background-color: #ffc107; color: black; }
@@ -42,62 +20,82 @@
         #section10 { background-color: #fd7e14; color: black; }
         #section11 { background-color: #20c997; color: white; }
         #section12 { background-color: #adb5bd; color: black; }
+
+        #section8 .row {
+            display: flex;
+            align-items: stretch; /* Sorgt dafür, dass alle Abschnitte die gleiche Höhe haben */
+        }
+
+        #section9, #section11 {
+            flex: 1 1 27,5%; /* Rock und Pop nehmen weniger Platz ein */
+        }
+
+        #section10 {
+            flex: 2 1 45%; /* Hip-Hop nimmt doppelt so viel Platz ein wie Rock oder Pop */
+        }
+
     </style>
 </head>
 <body>
     <!-- Button zum Öffnen der Sidebar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky top-0">
+    <nav class="navbar navbar-light bg-light position-sticky top-0">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Meine Webseite</a>
-
-            <!-- Toggler für kleinere Bildschirme -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    
+            <!-- Off-Canvas Toggler -->
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                Menü
             </button>
-
-            <!-- Navigation für größere Bildschirme -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <!-- ms-auto sorgt für Ausrichtung nach rechts -->
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#section1">Willkommen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section2">Informatik?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section3">Bogenschießen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section4">Editing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section5">Musikambitionen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section6">Faulheit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section7">Kein Fokus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section8">Musikempfehlungen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section9">Rock</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section10">Pop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section11">Hip-Hop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section12">Freunde</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
+    
+    <!-- Off-Canvas Navigation -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#section1">Willkommen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Informatik?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3">Bogenschießen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section4">Editing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section5">Musikambitionen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section6">Faulheit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section7">Kein Fokus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section8">Musikempfehlungen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section9">Rock</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section10">Hip-Hop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section11">Pop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section12">Freunde</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div class="content">
     <!-- Sektionen mit einzigartigen Stilen -->
@@ -210,39 +208,106 @@
 
     <section id="section8" class="p-5 text-center">
         <h2>Musikempfehlungen</h2>
-        <p> Ich habe einen sehr ungewöhnlichen Musikgeschmack, da ich nicht wirklich einen richtigen Musikgeschmack in diesem Sinne habe. Zumindest keinen statischen. Gefühlt jeden Monat wechselt sich mein Lieblingssong, Lieblingsartist und oft auch mal das Lieblingsgenre. Größtenteils rotiere ich zwischen Rock, Pop und Hip-Hop, weshalb ich hier einfach mal meine jeweiligen Top-Artists aus diesen drei Genres aufliste. (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
+        <p> Ich habe einen sehr ungewöhnlichen Musikgeschmack, da ich nicht wirklich einen richtigen Musikgeschmack in diesem Sinne habe. Zumindest
+            keinen statischen. Gefühlt jeden Monat wechselt sich mein Lieblingssong, Lieblingsartist und oft auch mal das Lieblingsgenre. Größtenteils
+            rotiere ich zwischen Rock, Pop und Hip-Hop, weshalb ich hier einfach mal meine jeweiligen Top-Artists aus diesen drei Genres aufliste.
+            (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
         </p>
 
         <!-- Bootstrap Grid -->
         <div class="container">
-            <div class="row">
+            <div class="row d-flex">
                 <!-- Rock -->
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3" id="section9" style="background-color: #e83e8c; color: white;">
+                <div class="col-12 col-md-4 p-3 flex-grow-1" id="section9" style="background-color: #e83e8c; color: white;">
                     <h3>Rock</h3>
-                    <p> Auch wenn ich hier sehr oft mal Exkursionen zum Metal mache und dort auf jeden Fall sehr viele empfehlenswerte Bands über die Jahre zu lieben gelernt habe, gewinnt hier wohl eindeutig Queen als meine Top-Band im Sinne des Rocks. Ich weiß, eine Kategorisierung dieser ikonischen Gruppe in nur ein Musikgenre ist vielleicht etwas beleidigend, doch ich denke Rock trifft es hier am besten, da ich deren Rock Songs auch am liebsten höre. Ob Brian May mit seinem legendären Solos und Gitarrenklang, John Deacon mit intuitiven und einprägsamen Basslines, Roger Taylor am Schlagzeug mit extravaganten Background-Vocals oder die wahrscheinlich beste Stimme des letzten Jahrhunderts, Freddie Mercury, die Band schneidet für mich in vielen Aspekten perfekt ab. Ich denke, jeder kennt Queen-Hymnen, wie "Bohemian Rhapsody" und "We are the Champions", doch auf welche Songs ich hier einmal das Licht werfen möchte, sind die aus der frühen Ära Queens. Meine Empfehlung: Wenn sich die Zeit findet, einfach mal die ersten beiden Alben der Band anhören. Man merkt hier, wie mit den Elementen, die Queen groß gemacht haben, also vor allem umfassende Song-Epen und vokale Harmonien, experimentiert wird. Das ist die Stelle in ihrer Karriere, die sie bis in die 90er geprägt hat, es ist der "Raw" Queen Sound, wenn ich mich mal so weit aus dem Fenster lehnen dürfte. Also wenn man einen kleinen musikalischen Trip in die 70er unternehmen möchte und Rock-Pioniere bei der Arbeit hören will, ist man mit "Queen" und "Queen II" genau am richtigen Platz.
-                    </p>
-                </div>
-
-                <!-- Pop -->
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3" id="section10" style="background-color: #fd7e14; color: black;">
-                    <h3>Pop</h3>
-                    <p> Ich muss sagen, bei Pop findet sich meinerseits nur sehr schwer ein Lieblingskünstler, da, wie ich finde, viele artistische Punkte einzelner Künstler in eine große "musikalische Masse" fließen. Und das ist nicht negativ gemeint. Jeder Musiker in dieser Musikrichtung hat immer noch ein eigenes persönliches Aroma, aber man hat auch das Gefühl, dass sich jeder gegenseitig aneinander orientiert, was zu einer interessanten Entwicklung der alleinigen Musikrichtung des Pops und zu noch interessanteren Genremischungen zwischen Pop und anderen Gebieten, wie Hip-Hop, führt. Wenn ich hier grob etwas Konkretes empfehlen kann, würde ich die Musik des "alten" und "neuen" Elton John anführen. An Johns Diskografie kann man exemplarisch die Entwicklung des Pop von seinen Anfängen bis zu dessen jetzigen Revolution und Neuzeit erkennen. Das hört man am besten, wenn man heutige Feature-Releases mit Dua Lipa oder Miley Cyrus direkt mit 50 Jahre alten noch sehr rock-inspirierten Alben, wie "Goodbye Yellow Brick Road" vergleicht. Es ist also sehr aufschlussreich, diese beiden Aspekte von Elton John mal miteinander zu mischen und im Mix zu hören, da man so nicht nur ikonische Pop- und Rocksongs zu Gehör bekommt, sondern auch noch die direkten Kontraste von frühem und jetzigem Pop erkunden kann.
+                    <p> Auch wenn ich hier sehr oft mal Exkursionen zum Metal mache und dort auf jeden Fall sehr viele empfehlenswerte Bands über
+                        die Jahre zu lieben gelernt habe, gewinnt hier wohl eindeutig Queen als meine Top-Band im Sinne des Rocks. Ich weiß, eine
+                        Kategorisierung dieser ikonischen Gruppe in nur ein Musikgenre ist vielleicht etwas beleidigend, doch ich denke Rock trifft
+                        es hier am besten, da ich deren Rock Songs auch am liebsten höre. Ob Brian May mit seinem legendären Solos und Gitarrenklang,
+                        John Deacon mit intuitiven und einprägsamen Basslines, Roger Taylor am Schlagzeug mit extravaganten Background-Vocals oder
+                        die wahrscheinlich beste Stimme des letzten Jahrhunderts, Freddie Mercury, die Band schneidet für mich in vielen Aspekten
+                        perfekt ab. Ich denke, jeder kennt Queen-Hymnen, wie "Bohemian Rhapsody" und "We are the Champions", doch auf welche Songs
+                        ich hier einmal das Licht werfen möchte, sind die aus der frühen Ära Queens. Meine Empfehlung: Wenn sich die Zeit findet,
+                        einfach mal die ersten beiden Alben der Band anhören. Man merkt hier, wie mit den Elementen, die Queen groß gemacht haben,
+                        also vor allem umfassende Song-Epen und vokale Harmonien, experimentiert wird. Das ist die Stelle in ihrer Karriere, die sie
+                        bis in die 90er geprägt hat, es ist der "Raw" Queen Sound, wenn ich mich mal so weit aus dem Fenster lehnen dürfte. Also wenn
+                        man einen kleinen musikalischen Trip in die 70er unternehmen möchte und Rock-Pioniere bei der Arbeit hören will, ist man mit
+                        "Queen" und "Queen II" genau am richtigen Platz.
                     </p>
                 </div>
 
                 <!-- Hip-Hop -->
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3" id="section11" style="background-color: #20c997; color: white;">
+                <div class="col-12 col-md-6 p-3 flex-grow-2" id="section10" style="background-color: #20c997; color: white;">
                     <h3>Hip-Hop</h3>
-                    <p> Mein aktuelles Lieblingsgenre dieser Drei. Ich könnte so viel zu einzelnen Künstler, aktuelle Fehden dieser und der allgemeinen Kunst des Raps sagen, aber ich werde mich aufgrund der Länge dieser Sektionen hier nun mal etwas kürzer halten. Es gibt im Hip-Hop überdurchschnittlich viele Underground Artists, von denen nicht wenige auch mal extreme "Banger"-Titel hervorbringen. Wenn ich mir mal wen aus dieser Richtung aussuchen könnte, kann ich das Duo Joey Valence & Brae nur empfehlen. Auch wenn man argumentieren könnte, dass die beiden nicht mehr wirklich "Underground" sind, haben sie einen wirklich distinktiven Sound, der an die Anfänge des modernen Hip-Hops, hier vor allem die Beastie Boys, erinnert und trotzdem durch beispielsweise futuristische EDM-Elemente und aktuelle Pop-Culture Referenzen in den Songtexten sehr fortschrittlich wirkt. Ich kann nur vorschlagen zumindest mal Songs, wie "Punk Tactics" oder "Crank It Up", anzuhören und zu erforschen, ob JVB's Musik vielleicht etwas für einen ist. Auch im High End des Hip-Hops gibt es zahlreiche Künstler, die ich empfehlen könnte, doch ich beschränke mich hier auch mal nur auf einen: Tyler, The Creator. Es gibt wenige, die seine umfassenden Talente im Songwriting, Producing und allgemeinen Experimentieren übertreffen können. Mein Lieblingspunkt bei Tyler ist die außerordentliche Darstellung seiner persönlichen Entwicklung durch seine musikalischen Projekte. Von seiner sehr grenzwertigen und tragischen jugendlichen Ära, dargestellt in "Bastard", "Goblin" und "Wolf", über das Entdecken, Akzeptieren und Ausleben seiner wahren Persönlichkeit, wie in "Flower Boy" oder "IGOR" bis hin zu, seit Neuestem, den Herausforderungen des Erwachsenseins, aufgelistet in "Chromakopia", bekommt man tiefe Einblicke in alle Lebensabschnitte dieses extravaganten Künstlers und kann, ganz nebenbei, seine Ohren verwöhnen, wenn man dafür bereit ist. Ich muss sagen, es war für mich am Anfang relativ schwer in die Musik von Tyler, The Creator voll und ganz einzutauchen. Viele Songs kamen mir beim ersten Mal hören mehr wie ein Meme als eine ausgefeilte musikalische Komposition vor. Mit dieser Einstellung lernt man ikonische Songs wie "EARFQUAKE" oder gleich das gesamte IGOR-Album erst nach einer gewissen Zeit zu lieben, aber wenn man erst über diesen Schatten gesprungen ist, hat Tyler Tracks in petto, von denen man sich wochenlang nicht erholt. Auf eine positive Weise natürlich. Falls man die gleiche Angewohnheit hat, wenn man seine Songs zum ersten Mal hört, kann ich zum Einstieg in seine Diskografie das noch eher poporientierte Album "Flower Boy" empfehlen. Mit Tracks, wie "See You Again" oder "911/Mr. Lonely", kann man erstmals ein Gefühl für Tylers Flow und instrumentale Komposition bekommen ohne direkt abgeschreckt zu werden, bevor man dann in seine weiteren Opera magna eintaucht. Und das lohnt sich.
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/Chromakopia_CD_cover.jpg" alt="Chromakopia-Album-Cover" class="img-fluid mb-3">
+                    <p> Mein aktuelles Lieblingsgenre dieser Drei. Ich könnte so viel zu einzelnen Künstler, aktuelle Fehden dieser und der 
+                        allgemeinen Kunst des Raps sagen, aber ich werde mich aufgrund der Länge dieser Sektionen hier nun mal etwas kürzer
+                        halten. Es gibt im Hip-Hop überdurchschnittlich viele Underground Artists, von denen nicht wenige auch mal extreme
+                        "Banger"-Titel hervorbringen. Wenn ich mir mal wen aus dieser Richtung aussuchen könnte, kann ich das Duo
+                        Joey Valence & Brae nur empfehlen. Auch wenn man argumentieren könnte, dass die beiden nicht mehr wirklich
+                        "Underground" sind, haben sie einen wirklich distinktiven Sound, der an die Anfänge des modernen Hip-Hops, hier vor
+                        allem die Beastie Boys, erinnert und trotzdem durch beispielsweise futuristische EDM-Elemente und aktuelle Pop-Culture
+                        Referenzen in den Songtexten sehr fortschrittlich wirkt. Ich kann nur vorschlagen zumindest mal Songs, wie
+                        "Punk Tactics" oder "Crank It Up", anzuhören und zu erforschen, ob JVB's Musik vielleicht etwas für einen ist. Auch im
+                        High End des Hip-Hops gibt es zahlreiche Künstler, die ich empfehlen könnte, doch ich beschränke mich hier auch mal nur
+                        auf einen: Tyler, The Creator. Es gibt wenige, die seine umfassenden Talente im Songwriting, Producing und allgemeinen
+                        Experimentieren übertreffen können. Mein Lieblingspunkt bei Tyler ist die außerordentliche Darstellung seiner
+                        persönlichen Entwicklung durch seine musikalischen Projekte. Von seiner sehr grenzwertigen und tragischen jugendlichen
+                        Ära, dargestellt in "Bastard", "Goblin" und "Wolf", über das Entdecken, Akzeptieren und Ausleben seiner wahren
+                        Persönlichkeit, wie in "Flower Boy" oder "IGOR" bis hin zu, seit Neuestem, den Herausforderungen des Erwachsenseins,
+                        aufgelistet in "Chromakopia", bekommt man tiefe Einblicke in alle Lebensabschnitte dieses extravaganten Künstlers
+                        und kann, ganz nebenbei, seine Ohren verwöhnen, wenn man dafür bereit ist. Ich muss sagen, es war für mich am Anfang
+                        relativ schwer in die Musik von Tyler, The Creator voll und ganz einzutauchen. Viele Songs kamen mir beim ersten Mal
+                        hören mehr wie ein Meme als eine ausgefeilte musikalische Komposition vor. Mit dieser Einstellung lernt man ikonische
+                        Songs wie "EARFQUAKE" oder gleich das gesamte IGOR-Album erst nach einer gewissen Zeit zu lieben, aber wenn man erst
+                        über diesen Schatten gesprungen ist, hat Tyler Tracks in petto, von denen man sich wochenlang nicht erholt. Auf eine
+                        positive Weise natürlich. Falls man die gleiche Angewohnheit hat, wenn man seine Songs zum ersten Mal hört, kann ich
+                        zum Einstieg in seine Diskografie das noch eher poporientierte Album "Flower Boy" empfehlen. Mit Tracks, wie
+                        "See You Again" oder "911/Mr. Lonely", kann man erstmals ein Gefühl für Tylers Flow und instrumentale Komposition
+                        bekommen ohne direkt abgeschreckt zu werden, bevor man dann in seine weiteren Opera magna eintaucht. Und das lohnt sich.
                     </p>
                 </div>
+
+                <!-- Pop -->
+                <div class="col-12 col-md-4 p-3 flex-grow-1" id="section11" style="background-color: #fd7e14; color: black;">
+                    <h3>Pop</h3>
+                    <p> Ich muss sagen, bei Pop findet sich meinerseits nur sehr schwer ein Lieblingskünstler, da, wie ich finde, viele artistische
+                        Punkte einzelner Künstler in eine große "musikalische Masse" fließen. Und das ist nicht negativ gemeint. Jeder Musiker in
+                        dieser Musikrichtung hat immer noch ein eigenes persönliches Aroma, aber man hat auch das Gefühl, dass sich jeder gegenseitig
+                        aneinander orientiert, was zu einer interessanten Entwicklung der alleinigen Musikrichtung des Pops und zu noch
+                        interessanteren Genremischungen zwischen Pop und anderen Gebieten, wie Hip-Hop, führt. Wenn ich hier grob etwas Konkretes
+                        empfehlen kann, würde ich die Musik des "alten" und "neuen" Elton John anführen. An Johns Diskografie kann man exemplarisch
+                        die Entwicklung des Pop von seinen Anfängen bis zu dessen jetzigen Revolution und Neuzeit erkennen. Das hört man am besten,
+                        wenn man heutige Feature-Releases mit Dua Lipa oder Miley Cyrus direkt mit 50 Jahre alten noch sehr rock-inspirierten Alben,
+                        wie "Goodbye Yellow Brick Road" vergleicht. Es ist also sehr aufschlussreich, diese beiden Aspekte von Elton John mal
+                        miteinander zu mischen und im Mix zu hören, da man so nicht nur ikonische Pop- und Rocksongs zu Gehör bekommt, sondern auch
+                        noch die direkten Kontraste von frühem und jetzigem Pop erkunden kann.
+                    </p>
+                </div>
+
+                
             </div>
         </div>
     </section>
 
     <section id="section12" class="p-5 text-center">
         <h2>Wie hast du Freunde?</h2>
-        <p> Von dem ganzen mehr oder weniger belanglosen Zeug, was ich hier schreibe, könnte man denken, dieser Mann scheint wenige soziale Kontakte zu haben. Ich werde das nicht verneinen, da meine sozialen Kompetenzen manchmal echt zu wünschen übrig lassen, aber ich habe einen relativ engen Freundeskreis, der schon seit Anfang meiner Gymnasialzeit, bei Manchen sogar schon seit dem Kindergarten, besteht. Ob  wir nun auf Discord irgendwelche Spiele zusammen zocken oder einen Ausflug zu einem Konzert machen, ich hasse alle tagtäglich immer gleichviel. Und falls du nun schon so weit gelesen hast, dann kann ich dir auch mal was über diese verwirrte Truppe erzählen. Auch wenn manche Insider nicht wirklich für das öffentliche Auge bestimmt sind, es gibt eine Sache, über die ich gerne schreiben würde: Das CTL-Anwesen. Ja, es ist genau nicht das, wonach es sich anhört. Um das Ganze mal zu entpacken: Unser Discord-Server heißt CTL (die hiermit abgekürzte Wortgruppe ist strengstens verschlüsselt und ebenso belanglos) und mit Anwesen ist ein Schrebergarten gemeint, den wir uns vor anderthalb Jahren gepachtet haben. Der Garten ist im Vergleich zu den anderen Grundstücken der Gartenanlage, welche größtenteils von älteren Menschen bewirtschaftet werden, wohl das am gründlichsten gepflegte Gelände. Zumindest was die Getränkeversorgung angeht. Ich meine, wir halten schon alles auf Vordermann, aber sage ich es mal so, nur wenige von uns haben das Gärtnern in diesem Alter als Hobby gewählt. Es war damals einfach cool, mal einen Ort zu haben, auf dem man immer etwas unternehmen kann, ob es nun eine kleine Feier war oder ein gemütlicher Spieleabend. Doch nun wäre es ehrlich gesagt auch mal cool, wenn sich bis nächsten Sommer wieder mal mehr Leute um den Garten kümmern und nicht nur immer die gleichen 2 von 10 Personen. Vielleicht sollte ich das gleich mal ansprechen. Hm. Danke, Selbstreflexion, welche ich anhand der Erstellung einer Website durchführe.
+        <p> Von dem ganzen mehr oder weniger belanglosen Zeug, was ich hier schreibe, könnte man denken, dieser Mann scheint wenige soziale
+            Kontakte zu haben. Ich werde das nicht verneinen, da meine sozialen Kompetenzen manchmal echt zu wünschen übrig lassen, aber ich
+            habe einen relativ engen Freundeskreis, der schon seit Anfang meiner Gymnasialzeit, bei Manchen sogar schon seit dem Kindergarten,
+            besteht. Ob  wir nun auf Discord irgendwelche Spiele zusammen zocken oder einen Ausflug zu einem Konzert machen, ich hasse alle
+            tagtäglich immer gleichviel. Und falls du nun schon so weit gelesen hast, dann kann ich dir auch mal was über diese verwirrte
+            Truppe erzählen. Auch wenn manche Insider nicht wirklich für das öffentliche Auge bestimmt sind, es gibt eine Sache, über die ich
+            gerne schreiben würde: Das CTL-Anwesen. Ja, es ist genau nicht das, wonach es sich anhört. Um das Ganze mal zu entpacken: Unser
+            Discord-Server heißt CTL (die hiermit abgekürzte Wortgruppe ist strengstens verschlüsselt und ebenso belanglos) und mit Anwesen
+            ist ein Schrebergarten gemeint, den wir uns vor anderthalb Jahren gepachtet haben. Der Garten ist im Vergleich zu den anderen
+            Grundstücken der Gartenanlage, welche größtenteils von älteren Menschen bewirtschaftet werden, wohl das am gründlichsten gepflegte
+            Gelände. Zumindest was die Getränkeversorgung angeht. Ich meine, wir halten schon alles auf Vordermann, aber sage ich es mal so,
+            nur wenige von uns haben das Gärtnern in diesem Alter als Hobby gewählt. Es war damals einfach cool, mal einen Ort zu haben, auf
+            dem man immer etwas unternehmen kann, ob es nun eine kleine Feier war oder ein gemütlicher Spieleabend. Doch nun wäre es ehrlich
+            gesagt auch mal cool, wenn sich bis nächsten Sommer wieder mal mehr Leute um den Garten kümmern und nicht nur immer die gleichen
+            2 von 10 Personen. Vielleicht sollte ich das gleich mal ansprechen. Hm. Danke, Selbstreflexion, welche ich anhand der Erstellung
+            einer Website durchführe. Achso ja, und danke dir fürs Lesen! :)
             </p>
     </section>
     </div>
