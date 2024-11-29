@@ -10,9 +10,28 @@
         z-index: 1050;
         }
 
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .carousel-inner img {
-        max-height: 500px; 
-        object-fit: cover;
+            max-height: 500px; 
+            object-fit: cover;
+        }
+
+        .carousel-item {
+            padding-bottom: 50px;
+        }
+
+        .carousel-item figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        .carousel-item figcaption {
+            font-size: 14px;
+            color: #333;
         }
 
         #section1 { background-color: #000000; color: white; }
@@ -28,6 +47,36 @@
         #section11 { background-color: #20c997; color: white; }
         #section12 { background-color: #adb5bd; color: black; }
 
+        #section3 figure img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        #section4 figure img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+        }
+
+        #section5 figure img {
+            max-width: 500px; 
+            width: 100%;
+            height: auto;
+        }
+
+        #section6 figure img {
+            max-width: 500px; 
+            width: 100%;
+            height: auto;
+        }
+
+        #section8 figure img {
+        max-width: 500px; /* Maximale Breite der Bilder */
+        width: 100%; /* Responsiv für kleinere Bildschirme */
+        height: auto; /* Proportionale Skalierung */
+    }
+
         #section8 .row {
             display: flex;
             align-items: stretch;
@@ -39,6 +88,12 @@
 
         #section10 {
             flex: 2 1 45%;
+        }
+
+        #section12 figure img {
+            max-width: 500px; 
+            width: 100%;
+            height: auto;
         }
 
     </style>
@@ -145,10 +200,12 @@
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/source-4280758_1280.jpg" class="d-block img-fluid mx-auto" alt="Bild 1">
+                    <figure><img src="./images/source-4280758_1280.jpg" class="d-block img-fluid mx-auto" alt="Eine Darstellung von Code">
+                    <figcaption> https://pixabay.com/de/photos/source-code-software-computer-4280758/ </figcaption></figure>
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/binary-2450152_1280.jpg" class="d-block img-fluid mx-auto" alt="Bild 2">
+                    <figure><img src="./images/binary-2450152_1280.jpg" class="d-block img-fluid mx-auto" alt="Person schreibt an einem Laptop">
+                        <figcaption> https://pixabay.com/de/photos/bin%C3%A4r-h%C3%A4nde-tastatur-tippen-2450152/</figcaption></figure>    
                 </div>
             </div>
 
@@ -165,70 +222,115 @@
 
     <section id="section3" class="p-5 text-center">
         <h2>Lieber einen Bogen laufen</h2>
-        <p> Über eine relativ lange Periode meiner Gymnasialzeit war ich im Bogenschuss-Verein BSC Wolfen aktiv. Es gab nichts Besseres,
-            als am Ende jeder Woche einfach mal ein bisschen Dampf abzulassen und auf dem Trainingsplatz entweder auf Zielscheiben oder 
-            künstliche Hirsche und Wildscheine zu schießen. Wie in jedem Sport ist "die Technik immer entscheidend", so zumindest meine
-            3 Trainer, die mich Woche für Woche abwechselnd unterrichteten und welche mir allesamt unterschiedliche Techniken beibringen
-            wollten, wie ich den gleichen Bogen doch zu halten und zu spannen habe. Manchmal, nur manchmal, etwas frustrierend. Aber der
-            Verein besteht aus einer echt netten Truppe, dessen unregelmäßig häufige Vereinsfeiern mit reichlich Getränken und
-            trainingsfreier Zeit ich dann doch öfter mal vermisse. Am Ende haben ich und mein Vater unter dem Vorbehalt von "wenig Zeit"
-            während meines Abiturs den Verein verlassen, der Hauptgrund für mich war jedoch der durchgängige Druck des Vereins an Turnieren
-            teilnehmen zu müssen, welche ich nie wirklich gemocht habt. Viel zu formal. Versteht mich nicht falsch, es ist ja ganz normal,
-            dass sich ein Sportverein natürlich mit Trophäen u. Ä. rühmen möchte, aber ich bin kein großer Fan von Wettkämpfen und die
-            Genugtuung auf Scheiben oder Plastiktiere zu schießen, hat mir eigentlich immer schon gereicht. Letzten Ende war ich mehrere
-            Jahre in diesem Verein, kenne nun wundervolle Menschen und habe zwar aus dem einzig größeren Turnier, an dem ich teilgenommen
-            habe, eine goldene Medaille vorzuweisen, aber keine Ahnung, was noch so hätte sein können, wenn ich dem Wettbewerbsdruck
-            vielleicht auch mal öfter nachgegeben hätte...
-        </p>
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-6">
+                <p> Über eine relativ lange Periode meiner Gymnasialzeit war ich im Bogenschuss-Verein BSC Wolfen aktiv. Es gab nichts Besseres,
+                    als am Ende jeder Woche einfach mal ein bisschen Dampf abzulassen und auf dem Trainingsplatz entweder auf Zielscheiben oder 
+                    künstliche Hirsche und Wildscheine zu schießen. Wie in jedem Sport ist "die Technik immer entscheidend", so zumindest meine
+                    3 Trainer, die mich Woche für Woche abwechselnd unterrichteten und welche mir allesamt unterschiedliche Techniken beibringen
+                    wollten, wie ich den gleichen Bogen doch zu halten und zu spannen habe. Manchmal, nur manchmal, etwas frustrierend. Aber der
+                    Verein besteht aus einer echt netten Truppe, dessen unregelmäßig häufige Vereinsfeiern mit reichlich Getränken und
+                    trainingsfreier Zeit ich dann doch öfter mal vermisse. Am Ende haben ich und mein Vater unter dem Vorbehalt von "wenig Zeit"
+                    während meines Abiturs den Verein verlassen, der Hauptgrund für mich war jedoch der durchgängige Druck des Vereins an Turnieren
+                    teilnehmen zu müssen, welche ich nie wirklich gemocht habt. Viel zu formal. Versteht mich nicht falsch, es ist ja ganz normal,
+                    dass sich ein Sportverein natürlich mit Trophäen u. Ä. rühmen möchte, aber ich bin kein großer Fan von Wettkämpfen und die
+                    Genugtuung auf Scheiben oder Plastiktiere zu schießen, hat mir eigentlich immer schon gereicht. Letzten Ende war ich mehrere
+                    Jahre in diesem Verein, kenne nun wundervolle Menschen und habe zwar aus dem einzig größeren Turnier, an dem ich teilgenommen
+                    habe, eine goldene Medaille vorzuweisen, aber keine Ahnung, was noch so hätte sein können, wenn ich dem Wettbewerbsdruck
+                    vielleicht auch mal öfter nachgegeben hätte...
+                </p>
+            </div>
+    
+            <div class="col-lg-5 col-md-6">
+                <figure><img src="./images/archery-2252657_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Aufgestellte Bögen">
+                <figcaption> https://pixabay.com/de/photos/bogenschie%C3%9Fen-sport-arrow-2252657/</figcaption></figure>
+                
+                
+            </div>
+        </div>
     </section>
 
     <section id="section4" class="p-5 text-center">
         <h2>Nicht immer nur der Text-Editor</h2>
-        <p> Als ich das erste Mal auf YouTube gestoßen bin, ging ein kleiner Funken in mir auf. Glaub ich. Die Redensart müsste so gehen.
-            Ob es nun Minecraft Let's Plays oder irgendwelche kurzen lustigen Videos waren, ich wollte das auch machen. Natürlich war mein
-            erster Content von Gameplay-Videos schlechter Qualität und obskurer Spiele beherrscht, doch dann entdeckte ich ein entscheidendes
-            Werkzeug für mich: Adobe Premiere Pro. Über die Jahre habe ich mir immer mehr neue Methoden angeeignet, meine Videos ansehnlicher zu
-            gestalten. Auch wenn ich dabei nicht den "großen Durchbruch" erreicht habe und wahrscheinlich auch nie erreichen werde, kann ich auf
-            jeden Fall sagen, eine Fähigkeit für Content-Creation entwickelt zu haben auf die zumindest ich persönlich sehr stolz sein kann.
-            Vielleicht werde ich nach meinem Studium noch einmal für ein paar Monate versuchen, meinen kompletten Fokus auf dieses Lebensprojekt
-            zu legen, da ich sonst nie genug Zeit und Motivation aufbringen konnte, neben all den anderen Aktivitäten in meinem Leben regelmäßig
-            guten Content zu produzieren. Aber erst einmal habe ich noch andere Prioritäten.
-        </p>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 order-lg-1 order-md-1">
+                <figure>
+                    <img src="./images/editing-1141505_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Videobearbeitung">
+                    <figcaption> https://pixabay.com/de/photos/bearbeitung-video-rechner-1141505/</figcaption>
+                </figure>
+            </div>
+    
+            <div class="col-lg-7 col-md-6 order-lg-2 order-md-2">
+                <p>Als ich das erste Mal auf YouTube gestoßen bin, ging ein kleiner Funken in mir auf. Glaub ich. Die Redensart müsste so gehen.
+                    Ob es nun Minecraft Let's Plays oder irgendwelche kurzen lustigen Videos waren, ich wollte das auch machen. Natürlich war mein
+                    erster Content von Gameplay-Videos schlechter Qualität und obskurer Spiele beherrscht, doch dann entdeckte ich ein entscheidendes
+                    Werkzeug für mich: Adobe Premiere Pro. Über die Jahre habe ich mir immer mehr neue Methoden angeeignet, meine Videos ansehnlicher zu
+                    gestalten. Auch wenn ich dabei nicht den "großen Durchbruch" erreicht habe und wahrscheinlich auch nie erreichen werde, kann ich auf
+                    jeden Fall sagen, eine Fähigkeit für Content-Creation entwickelt zu haben auf die zumindest ich persönlich sehr stolz sein kann.
+                    Vielleicht werde ich nach meinem Studium noch einmal für ein paar Monate versuchen, meinen kompletten Fokus auf dieses Lebensprojekt
+                    zu legen, da ich sonst nie genug Zeit und Motivation aufbringen konnte, neben all den anderen Aktivitäten in meinem Leben regelmäßig
+                    guten Content zu produzieren. Aber erst einmal habe ich noch andere Prioritäten.
+                </p>
+            </div>
+        </div>
     </section>
+    
 
     <section id="section5" class="p-5 text-center">
         <h2>Vielleicht ist hier wirklich ein Musiker verloren gegangen</h2>
-        <p> Früher war Musik nie wirklich auf meiner Agenda gewesen. Natürlich hat man immer mal den ein oder anderen Radio-Song hoch und runter
-            gehört, aber ein richtiges Interesse war nie wirklich da. Bis zur Oberstufe. Nachdem ich meine Musiklehrerin multiple Male enttäuscht
-            haben muss, sie hat mir empfohlen dem Schulchor beizutreten, und dann auch noch Musik für die Abiturjahre abgewählt habe, alle meine
-            Freunde wählten Kunst, kam in mir, glaube ich, ein kleines Gefühl der Reue auf. Ich fing an sehr viel mehr Songs zu hören und das aus
-            den unterschiedlichsten Genres. Weiter <a href="#section8">unten</a> auf dieser Seite findet man auch meine derzeitigen Lieblingsgenres und persönliche
-            Empfehlungen, wen es interessiert. Bei Hip-Hop-Songs wurden Reimschemas ermittelt und eigene Texte geschrieben, Rock und Metal haben mich
-            inspiriert, mir eine Gitarre und später auch einen Bass zuzulegen, die mich während meiner Prüfungen vielleicht auch etwas vom Lernen
-            abgehalten haben, und ich habe mehrfach in der Woche versucht, Töne zu treffen, an die wahrscheinlich nur Freddy Mercury herankommen
-            würde. Ich frage mich häufig, ob, wenn ich eher angefangen hätte, Musik mehr in mein Leben einfließen zu lassen, ich es vielleicht
-            auch mal geschafft hätte, meine Stimme annähernd so gut wie er kontrollieren zu können (so oder so natürlich sehr unrealistisch).
-            Auf jeden Fall kann ich sagen, dass Musik im Abitur die bessere Wahl gewesen wäre, unabhängig von meiner "musikalischen Begabung", da
-            noch nicht mal schräges Singen meine künstlerischen Fähigkeiten unterbieten könnte.
-        </p>
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-6 order-lg-1 order-md-1">
+                <p>Früher war Musik nie wirklich auf meiner Agenda gewesen. Natürlich hat man immer mal den ein oder anderen Radio-Song hoch und runter
+                    gehört, aber ein richtiges Interesse war nie wirklich da. Bis zur Oberstufe. Nachdem ich meine Musiklehrerin multiple Male enttäuscht
+                    haben muss, sie hat mir empfohlen dem Schulchor beizutreten, und dann auch noch Musik für die Abiturjahre abgewählt habe, alle meine
+                    Freunde wählten Kunst, kam in mir, glaube ich, ein kleines Gefühl der Reue auf. Ich fing an sehr viel mehr Songs zu hören und das aus
+                    den unterschiedlichsten Genres. Weiter <a href="#section8">unten</a> auf dieser Seite findet man auch meine derzeitigen Lieblingsgenres und persönliche
+                    Empfehlungen, wen es interessiert. Bei Hip-Hop-Songs wurden Reimschemas ermittelt und eigene Texte geschrieben, Rock und Metal haben mich
+                    inspiriert, mir eine Gitarre und später auch einen Bass zuzulegen, die mich während meiner Prüfungen vielleicht auch etwas vom Lernen
+                    abgehalten haben, und ich habe mehrfach in der Woche versucht, Töne zu treffen, an die wahrscheinlich nur Freddy Mercury herankommen
+                    würde. Ich frage mich häufig, ob, wenn ich eher angefangen hätte, Musik mehr in mein Leben einfließen zu lassen, ich es vielleicht
+                    auch mal geschafft hätte, meine Stimme annähernd so gut wie er kontrollieren zu können (so oder so natürlich sehr unrealistisch).
+                    Auf jeden Fall kann ich sagen, dass Musik im Abitur die bessere Wahl gewesen wäre, unabhängig von meiner "musikalischen Begabung", da
+                    noch nicht mal schräges Singen meine künstlerischen Fähigkeiten unterbieten könnte.
+                </p>
+            </div>
+    
+            <div class="col-lg-5 col-md-6 order-lg-2 order-md-2">
+                <figure>
+                    <img src="./images/microphone-4328055_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Mikrofon">
+                    <figcaption> https://pixabay.com/de/photos/mikrofon-sound-audio-musik-mikro-4328055/</figcaption>
+                </figure>
+            </div>
+        </div>
     </section>
 
     <section id="section6" class="p-5 text-center">
-        <h2>Die Arbeit ruft! ... vielleicht aber auch erst morgen</h2>
-        <p> Wie wahrscheinlich relativ viele Menschen habe auch ich ein starkes Problem mit Prokrastination. Ich bin schon sehr froh, dass ich
-            zumindest einen Workout-Plan in etwa einhalten kann, jedoch sieht das mit anderweitigen Lebenspflichten manchmal sehr düster aus.
-            Dieses Projekt hier stellt eine Ausnahme dar, da ich diesen Satz mehr als eine Woche vor Abgabe schreibe, jedoch kam es nun
-            schon unangenehm häufig vor, dass ich Arbeiten für Prüfungszulassungen oder Prüfungen selbst so weit wie möglich nach hinten
-            geschoben habe, und das ohne triftigen Grund. Ich reserviere mir eigentlich immer schon relativ viel Zeit für meine
-            Studiumsangelegenheiten, jedoch münden in diese Zeit öfter mal stundenlange YouTube-Session, aus welchen ich kein weiteres Wissen
-            mitnehme. Auch lächelt mich das Spotify-Icon auf meinem Desktop ganz gerne mal an und verlockt mich, die neuen Singles meiner
-            Lieblingskünstler zu hören, statt weiter für die morgige Prüfung zu lernen. Was mich dabei am meisten aufregt, ist die Tatsache,
-            dass ich mich in so welchen Phasen auch für nichts anderes Produktives, was mir sonst Spaß macht, ob das nun Bass spielen oder
-            Videos editieren ist, sondern nur für sinnlose Aktivitäten begeistern kann. Das ist auf jeden Fall eines meiner Hauptprobleme,
-            welches ich mich im Laufe meines Lebens noch begrenzen muss. Ein weiteres Problem ist...
-            
-        </p>
+        <h2>Die Arbeit ruft! ...vielleicht aber auch erst morgen</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6 order-lg-1 order-md-1">
+                <figure>
+                    <img src="./images/the-cat-2445486_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Prokrastination Symbolbild">
+                    <figcaption> https://pixabay.com/de/photos/die-katze-schl%C3%A4fst-du-r%C3%B6tlich-faul-2445486/</figcaption>
+                </figure>
+            </div>
+    
+            <div class="col-lg-7 col-md-6 order-lg-2 order-md-2">
+                <p>Wie wahrscheinlich relativ viele Menschen habe auch ich ein starkes Problem mit Prokrastination. Ich bin schon sehr froh, dass ich
+                    zumindest einen Workout-Plan in etwa einhalten kann, jedoch sieht das mit anderweitigen Lebenspflichten manchmal sehr düster aus.
+                    Dieses Projekt hier stellt eine Ausnahme dar, da ich diesen Satz mehr als eine Woche vor Abgabe schreibe, jedoch kam es nun
+                    schon unangenehm häufig vor, dass ich Arbeiten für Prüfungszulassungen oder Prüfungen selbst so weit wie möglich nach hinten
+                    geschoben habe, und das ohne triftigen Grund. Ich reserviere mir eigentlich immer schon relativ viel Zeit für meine
+                    Studiumsangelegenheiten, jedoch münden in diese Zeit öfter mal stundenlange YouTube-Session, aus welchen ich kein weiteres Wissen
+                    mitnehme. Auch lächelt mich das Spotify-Icon auf meinem Desktop ganz gerne mal an und verlockt mich, die neuen Singles meiner
+                    Lieblingskünstler zu hören, statt weiter für die morgige Prüfung zu lernen. Was mich dabei am meisten aufregt, ist die Tatsache,
+                    dass ich mich in so welchen Phasen auch für nichts anderes Produktives, was mir sonst Spaß macht, ob das nun Bass spielen oder
+                    Videos editieren ist, sondern nur für sinnlose Aktivitäten begeistern kann. Das ist auf jeden Fall eines meiner Hauptprobleme,
+                    welches ich mich im Laufe meines Lebens noch begrenzen muss. Ein weiteres Problem ist...
+                </p>
+            </div>
+        </div>
     </section>
+    
 
     <section id="section7" class="p-5 text-center">
         <h2>Heute das, morgen was anderes</h2>
@@ -253,9 +355,8 @@
             (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
         </p>
 
-        <div class="container">
+        <div>
             <div class="row d-flex">
-                <!-- Rock -->
                 <div class="col-12 col-md-4 p-3 flex-grow-1" id="section9" style="background-color: #e83e8c; color: white;">
                     <h3>Rock</h3>
                     <p> Auch wenn ich hier sehr oft mal Exkursionen zum Metal mache und dort auf jeden Fall sehr viele empfehlenswerte Bands über
@@ -272,9 +373,12 @@
                         man einen kleinen musikalischen Trip in die 70er unternehmen möchte und Rock-Pioniere bei der Arbeit hören will, ist man mit
                         "Queen" und "Queen II" genau am richtigen Platz.
                     </p>
+                    <figure>
+                        <img src="./images/guitar-2925274_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Queen Band">
+                        <figcaption> https://pixabay.com/de/photos/gitarre-e-gitarre-streichinstrument-2925274/</figcaption>
+                    </figure>
                 </div>
 
-                <!-- Hip-Hop -->
                 <div class="col-12 col-md-6 p-3 flex-grow-2" id="section10" style="background-color: #20c997; color: white;">
                     <h3>Hip-Hop</h3>
                     <a href="" target="_blank">
@@ -306,9 +410,13 @@
                         "See You Again" oder "911/Mr. Lonely", kann man erstmals ein Gefühl für Tylers Flow und instrumentale Komposition
                         bekommen ohne direkt abgeschreckt zu werden, bevor man dann in seine weiteren Opera magna eintaucht. Und das lohnt sich.
                     </p>
+                    <figure>
+                        <img src="./images/man-1845432_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Queen Band">
+                        <figcaption> https://pixabay.com/de/photos/mann-mikrofon-musik-musiker-1845432/</figcaption>
+                    </figure>
+
                 </div>
 
-                <!-- Pop -->
                 <div class="col-12 col-md-4 p-3 flex-grow-1" id="section11" style="background-color: #fd7e14; color: black;">
                     <h3>Pop</h3>
                     <p> Ich muss sagen, bei Pop findet sich meinerseits nur sehr schwer ein Lieblingskünstler, da, wie ich finde, viele artistische
@@ -323,6 +431,10 @@
                         miteinander zu mischen und im Mix zu hören, da man so nicht nur ikonische Pop- und Rocksongs zu Gehör bekommt, sondern auch
                         noch die direkten Kontraste von frühem und jetzigem Pop erkunden kann.
                     </p>
+                    <figure>
+                        <img src="./images/guitarist-2530542_1280.jpg" alt="Queen Band">
+                        <figcaption> https://pixabay.com/de/photos/gitarrist-s%C3%A4nger-band-rock-n-roll-2530542/</figcaption>
+                    </figure>
                 </div>
 
                 
@@ -335,7 +447,7 @@
         <p> Von dem ganzen mehr oder weniger belanglosen Zeug, was ich hier schreibe, könnte man denken, dieser Mann scheint wenige soziale
             Kontakte zu haben. Ich werde das nicht verneinen, da meine sozialen Kompetenzen manchmal echt zu wünschen übrig lassen, aber ich
             habe einen relativ engen Freundeskreis, der schon seit Anfang meiner Gymnasialzeit, bei Manchen sogar schon seit dem Kindergarten,
-            besteht. Ob  wir nun auf Discord irgendwelche Spiele zusammen zocken oder einen Ausflug zu einem Konzert machen, ich hasse alle
+            besteht. Ob wir nun auf Discord irgendwelche Spiele zusammen zocken oder einen Ausflug zu einem Konzert machen, ich hasse alle
             tagtäglich immer gleichviel. Und falls du nun schon so weit gelesen hast, dann kann ich dir auch mal was über diese verwirrte
             Truppe erzählen. Auch wenn manche Insider nicht wirklich für das öffentliche Auge bestimmt sind, es gibt eine Sache, über die ich
             gerne schreiben würde: Das CTL-Anwesen. Ja, es ist genau nicht das, wonach es sich anhört. Um das Ganze mal zu entpacken: Unser
@@ -348,8 +460,13 @@
             gesagt auch mal cool, wenn sich bis nächsten Sommer wieder mal mehr Leute um den Garten kümmern und nicht nur immer die gleichen
             2 von 10 Personen. Vielleicht sollte ich das gleich mal ansprechen. Hm. Danke, Selbstreflexion, welche ich anhand der Erstellung
             einer Website durchführe. Achso ja, und danke dir fürs Lesen! :)
-            </p>
+        </p>
+        <figure>
+            <img src="./images/garden-2040714_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Schrebergarten">
+            <figcaption>https://pixabay.com/de/photos/garten-park-schloss-landschaftsbau-2040714/</figcaption>
+        </figure>
     </section>
+    
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
