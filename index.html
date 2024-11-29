@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Test</title>
+    <title>Wer ist Erik?</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>      
         .navbar {
-        z-index: 1050;
+            z-index: 1050;
+        }
+
+        #section3 figure img, 
+        #section4 figure img, 
+        #section5 figure img, 
+        #section6 figure img, 
+        #section8 figure img, 
+        #section12 figure img {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
         }
 
         figure img {
@@ -16,7 +27,7 @@
         }
 
         .carousel-inner img {
-            max-height: 500px; 
+            max-height: 500px;
             object-fit: cover;
         }
 
@@ -47,54 +58,19 @@
         #section11 { background-color: #20c997; color: white; }
         #section12 { background-color: #adb5bd; color: black; }
 
-        #section3 figure img {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-        }
-
-        #section4 figure img {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-        }
-
-        #section5 figure img {
-            max-width: 500px; 
-            width: 100%;
-            height: auto;
-        }
-
-        #section6 figure img {
-            max-width: 500px; 
-            width: 100%;
-            height: auto;
-        }
-
-        #section8 figure img {
-        max-width: 500px; /* Maximale Breite der Bilder */
-        width: 100%; /* Responsiv für kleinere Bildschirme */
-        height: auto; /* Proportionale Skalierung */
-    }
-
         #section8 .row {
             display: flex;
             align-items: stretch;
         }
 
         #section9, #section11 {
-            flex: 1 1 27,5%;
+            flex: 1 1 27.5%;
         }
 
         #section10 {
             flex: 2 1 45%;
         }
 
-        #section12 figure img {
-            max-width: 500px; 
-            width: 100%;
-            height: auto;
-        }
 
     </style>
 </head>
@@ -162,9 +138,8 @@
             an der HTWK Leipzig entstanden. Hierbei handelt es sich um einen One-Pager, in welchem ich viel zu viele Informationen,
             Erlebnisse und Ereignisse meines Lebens beschreibe und mit Bootstrap-Techniken darstelle. Ich werde diesen ersten Abschnitt
             einmal verwenden, um nennenswerte Implementationen auf dieser Seite zu beleuchten und zu erläutern.<br>
-            Falls dein Bildschirm groß genug ist, kannst du dir aus dem Navigationsmenü oben direkt ein Thema aussuchen, zu welchem du
-            hinscrollen möchtest. Bei kleineren und mobilen Ansichten findest du oben rechts einen Button, der nach Anklicken das gleiche
-            Navigationsmenü aufklappt (<a href="https://getbootstrap.com/docs/5.3/components/offcanvas/" target="_blank">offcanvas</a>), aus welchem du
+            Du findest oben rechts einen Button, der nach Anklicken das Navigationsmenü aufklappt
+            (<a href="https://getbootstrap.com/docs/5.3/components/offcanvas/" target="_blank">offcanvas</a>), aus welchem du
             wählen kannst. Das Menü kann dann mit einem Klick auf einen anderen Ort der Seite oder auf das Kreuz wieder geschlossen werden.
             Die einzelnen Abschnitte sind meist durch section-Elemente implementiert, dessen Inhalt durch die Bootstrap Klasse p-5 text-center
             dargestellt werden. Im hierauf folgenden Abschnitt ist testweise auch ein minimales Beispiel der
@@ -172,6 +147,11 @@
             zwei Bildern implementiert.
             In einer späteren Sektion <a href="#section8">Musikempfehlungen</a> wird Bootstraps Grid-System genutzt, um mehrere Sektionen
             in einem Art Layout darzustellen (<a href="https://getbootstrap.com/docs/5.3/layout/grid/#grid-options" target="_blank">Grid system</a>).
+            Auch wenn man dies in genannter Sektion am prominentesten erkennen kann, habe ich mit dieser Funktion auch alle anderen Abschnitte mit
+            Bildern an der linken oder rechten Seite implementiert. Somit wären die größeren sehr lohnenswerten Presets von Bootstrap, die auf
+            der Seite verwendet worden, erst einmal aufgegriffen. Natürlich gibt es auch noch kleinere Funktionaliäten, wie Buttons oder Header,
+            für die natürlich auch Bootstrap ausgenutzt worde, aber ich denke die relevantesten Vorlagen hier, habe ich nun erst einmal beschrieben.<br>
+            Ansonsten wünsche ich, falls möglich, noch viel Spaß beim Lesen einiger meiner Lebensgeschichten und Wehwehchen!
         </p>
     </section>
 
@@ -229,12 +209,12 @@
                     künstliche Hirsche und Wildscheine zu schießen. Wie in jedem Sport ist "die Technik immer entscheidend", so zumindest meine
                     3 Trainer, die mich Woche für Woche abwechselnd unterrichteten und welche mir allesamt unterschiedliche Techniken beibringen
                     wollten, wie ich den gleichen Bogen doch zu halten und zu spannen habe. Manchmal, nur manchmal, etwas frustrierend. Aber der
-                    Verein besteht aus einer echt netten Truppe, dessen unregelmäßig häufige Vereinsfeiern mit reichlich Getränken und
+                    Verein besteht aus einer echt netten Truppe, dessen unverhältnismäßig häufige Vereinsfeiern mit reichlich Getränken und
                     trainingsfreier Zeit ich dann doch öfter mal vermisse. Am Ende haben ich und mein Vater unter dem Vorbehalt von "wenig Zeit"
                     während meines Abiturs den Verein verlassen, der Hauptgrund für mich war jedoch der durchgängige Druck des Vereins an Turnieren
-                    teilnehmen zu müssen, welche ich nie wirklich gemocht habt. Viel zu formal. Versteht mich nicht falsch, es ist ja ganz normal,
+                    teilnehmen zu müssen, welche ich nie wirklich gemocht habe. Viel zu formal. Versteht mich nicht falsch, es ist ja ganz normal,
                     dass sich ein Sportverein natürlich mit Trophäen u. Ä. rühmen möchte, aber ich bin kein großer Fan von Wettkämpfen und die
-                    Genugtuung auf Scheiben oder Plastiktiere zu schießen, hat mir eigentlich immer schon gereicht. Letzten Ende war ich mehrere
+                    Genugtuung auf Scheiben oder Plastiktiere zu schießen, hat mir eigentlich immer schon gereicht. Letzten Endes war ich mehrere
                     Jahre in diesem Verein, kenne nun wundervolle Menschen und habe zwar aus dem einzig größeren Turnier, an dem ich teilgenommen
                     habe, eine goldene Medaille vorzuweisen, aber keine Ahnung, was noch so hätte sein können, wenn ich dem Wettbewerbsdruck
                     vielleicht auch mal öfter nachgegeben hätte...
@@ -261,12 +241,12 @@
             </div>
     
             <div class="col-lg-7 col-md-6 order-lg-2 order-md-2">
-                <p>Als ich das erste Mal auf YouTube gestoßen bin, ging ein kleiner Funken in mir auf. Glaub ich. Die Redensart müsste so gehen.
+                <p> Als ich das erste Mal auf YouTube gestoßen bin, ging ein kleiner Funken in mir auf. Glaub ich. Die Redensart müsste so gehen.
                     Ob es nun Minecraft Let's Plays oder irgendwelche kurzen lustigen Videos waren, ich wollte das auch machen. Natürlich war mein
                     erster Content von Gameplay-Videos schlechter Qualität und obskurer Spiele beherrscht, doch dann entdeckte ich ein entscheidendes
                     Werkzeug für mich: Adobe Premiere Pro. Über die Jahre habe ich mir immer mehr neue Methoden angeeignet, meine Videos ansehnlicher zu
                     gestalten. Auch wenn ich dabei nicht den "großen Durchbruch" erreicht habe und wahrscheinlich auch nie erreichen werde, kann ich auf
-                    jeden Fall sagen, eine Fähigkeit für Content-Creation entwickelt zu haben auf die zumindest ich persönlich sehr stolz sein kann.
+                    jeden Fall sagen, eine Fähigkeit für Content-Creation entwickelt zu haben, auf die zumindest ich persönlich sehr stolz sein kann.
                     Vielleicht werde ich nach meinem Studium noch einmal für ein paar Monate versuchen, meinen kompletten Fokus auf dieses Lebensprojekt
                     zu legen, da ich sonst nie genug Zeit und Motivation aufbringen konnte, neben all den anderen Aktivitäten in meinem Leben regelmäßig
                     guten Content zu produzieren. Aber erst einmal habe ich noch andere Prioritäten.
@@ -280,7 +260,7 @@
         <h2>Vielleicht ist hier wirklich ein Musiker verloren gegangen</h2>
         <div class="row align-items-center">
             <div class="col-lg-7 col-md-6 order-lg-1 order-md-1">
-                <p>Früher war Musik nie wirklich auf meiner Agenda gewesen. Natürlich hat man immer mal den ein oder anderen Radio-Song hoch und runter
+                <p> Früher war Musik nie wirklich auf meiner Agenda gewesen. Natürlich hat man immer mal den ein oder anderen Radio-Song hoch und runter
                     gehört, aber ein richtiges Interesse war nie wirklich da. Bis zur Oberstufe. Nachdem ich meine Musiklehrerin multiple Male enttäuscht
                     haben muss, sie hat mir empfohlen dem Schulchor beizutreten, und dann auch noch Musik für die Abiturjahre abgewählt habe, alle meine
                     Freunde wählten Kunst, kam in mir, glaube ich, ein kleines Gefühl der Reue auf. Ich fing an sehr viel mehr Songs zu hören und das aus
@@ -305,27 +285,27 @@
     </section>
 
     <section id="section6" class="p-5 text-center">
-        <h2>Die Arbeit ruft! ...vielleicht aber auch erst morgen</h2>
+        <h2>Die Arbeit ruft! ... vielleicht aber auch erst morgen</h2>
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-6 order-lg-1 order-md-1">
                 <figure>
-                    <img src="./images/the-cat-2445486_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Prokrastination Symbolbild">
+                    <img src="./images/the-cat-2445486_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Liegende Katze">
                     <figcaption> https://pixabay.com/de/photos/die-katze-schl%C3%A4fst-du-r%C3%B6tlich-faul-2445486/</figcaption>
                 </figure>
             </div>
     
             <div class="col-lg-7 col-md-6 order-lg-2 order-md-2">
-                <p>Wie wahrscheinlich relativ viele Menschen habe auch ich ein starkes Problem mit Prokrastination. Ich bin schon sehr froh, dass ich
+                <p> Wie wahrscheinlich relativ viele Menschen habe auch ich ein starkes Problem mit Prokrastination. Ich bin schon sehr froh, dass ich
                     zumindest einen Workout-Plan in etwa einhalten kann, jedoch sieht das mit anderweitigen Lebenspflichten manchmal sehr düster aus.
                     Dieses Projekt hier stellt eine Ausnahme dar, da ich diesen Satz mehr als eine Woche vor Abgabe schreibe, jedoch kam es nun
                     schon unangenehm häufig vor, dass ich Arbeiten für Prüfungszulassungen oder Prüfungen selbst so weit wie möglich nach hinten
                     geschoben habe, und das ohne triftigen Grund. Ich reserviere mir eigentlich immer schon relativ viel Zeit für meine
-                    Studiumsangelegenheiten, jedoch münden in diese Zeit öfter mal stundenlange YouTube-Session, aus welchen ich kein weiteres Wissen
+                    Studiumsangelegenheiten, jedoch münden in diese Zeit öfter mal stundenlange YouTube-Sessions, aus welchen ich kein weiteres Wissen
                     mitnehme. Auch lächelt mich das Spotify-Icon auf meinem Desktop ganz gerne mal an und verlockt mich, die neuen Singles meiner
                     Lieblingskünstler zu hören, statt weiter für die morgige Prüfung zu lernen. Was mich dabei am meisten aufregt, ist die Tatsache,
                     dass ich mich in so welchen Phasen auch für nichts anderes Produktives, was mir sonst Spaß macht, ob das nun Bass spielen oder
                     Videos editieren ist, sondern nur für sinnlose Aktivitäten begeistern kann. Das ist auf jeden Fall eines meiner Hauptprobleme,
-                    welches ich mich im Laufe meines Lebens noch begrenzen muss. Ein weiteres Problem ist...
+                    für das ich mich im zukünftigen Verlauf meines Lebens noch weiterhin anpassen muss. Ein weiteres Problem ist...
                 </p>
             </div>
         </div>
@@ -338,7 +318,7 @@
             extrem schwer, mich für einen längeren Zeitraum für eine bestimmte Sache zu motivieren bzw. zu interessieren. Beispielsweise spiele ich
             manchmal ein Multiplayer-Spiel, wie Counter-Strike, beschließe plötzlich, dass ich richtig gut in diesem Spiel werden möchte, räume mir
             Zeiten im Tag ein, um die In-Game-Mechaniken umso besser zu meistern, nur um dem Spiel einen Monat später nicht mehr in die Augen sehen
-            zu möchten und die Zeit, die ich damit verbracht habe, als "Verschwendung" abzustempeln. Natürlich ist so etwas relativ harmlos, wenn es
+            zu wollen und die Zeit, die ich damit verbracht habe, als "Verschwendung" abzustempeln. Natürlich ist so etwas relativ harmlos, wenn es
             nur um ein Videospiel geht, wenn man das jedoch auf die eigene berufliche Karriere überträgt, wird das schon sehr viel anstrengender.
             Ich befinde mich zwar in meinem Erststudium, aber wie oft mir schon der Gedanke kam, aufzuhören und eine andere kurzweilige Passion zu
             verfolgen ist schon relativ beängstigend. Es ist, denke ich, für fast niemanden leicht, dauerhaft Motivation für nur eine Sache zu haben,
@@ -349,20 +329,21 @@
 
     <section id="section8" class="p-5 text-center">
         <h2>Musikempfehlungen</h2>
-        <p> Ich habe einen sehr ungewöhnlichen Musikgeschmack, da ich nicht wirklich einen richtigen Musikgeschmack in diesem Sinne habe. Zumindest
-            keinen statischen. Gefühlt jeden Monat wechselt sich mein Lieblingssong, Lieblingsartist und oft auch mal das Lieblingsgenre. Größtenteils
-            rotiere ich zwischen Rock, Pop und Hip-Hop, weshalb ich hier einfach mal meine jeweiligen Top-Artists aus diesen drei Genres aufliste.
-            (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
+        <p> Jetzt aber mal weg von persönlichen Problemen. Wie wäre es mit ein paar Liedern, die mir helfen, diese Probleme zu unterdrücken? Also man
+            muss sagen, ich habe einen sehr ungewöhnlichen Musikgeschmack, da ich nicht wirklich einen richtigen Musikgeschmack in diesem Sinne habe.
+            Zumindest keinen statischen. Gefühlt jeden Monat wechselt sich mein Lieblingssong, Lieblingsartist und oft auch mal das Lieblingsgenre.
+            Größtenteils rotiere ich zwischen Rock, Pop und Hip-Hop, weshalb ich hier einfach mal meine jeweiligen Top-Artists aus diesen drei Genres
+            aufliste. (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
         </p>
 
         <div>
             <div class="row d-flex">
                 <div class="col-12 col-md-4 p-3 flex-grow-1" id="section9" style="background-color: #e83e8c; color: white;">
                     <h3>Rock</h3>
-                    <p> Auch wenn ich hier sehr oft mal Exkursionen zum Metal mache und dort auf jeden Fall sehr viele empfehlenswerte Bands über
+                    <p> Auch wenn ich in dieser Richtung sehr oft mal Exkursionen zum Metal mache und dort auf jeden Fall sehr viele empfehlenswerte Bands über
                         die Jahre zu lieben gelernt habe, gewinnt hier wohl eindeutig Queen als meine Top-Band im Sinne des Rocks. Ich weiß, eine
                         Kategorisierung dieser ikonischen Gruppe in nur ein Musikgenre ist vielleicht etwas beleidigend, doch ich denke Rock trifft
-                        es hier am besten, da ich deren Rock Songs auch am liebsten höre. Ob Brian May mit seinem legendären Solos und Gitarrenklang,
+                        es hier am besten, da ich deren Rock Songs auch am liebsten höre. Ob Brian May mit seinen legendären Solos und Gitarrenklang,
                         John Deacon mit intuitiven und einprägsamen Basslines, Roger Taylor am Schlagzeug mit extravaganten Background-Vocals oder
                         die wahrscheinlich beste Stimme des letzten Jahrhunderts, Freddie Mercury, die Band schneidet für mich in vielen Aspekten
                         perfekt ab. Ich denke, jeder kennt Queen-Hymnen, wie "Bohemian Rhapsody" und "We are the Champions", doch auf welche Songs
@@ -370,21 +351,18 @@
                         einfach mal die ersten beiden Alben der Band anhören. Man merkt hier, wie mit den Elementen, die Queen groß gemacht haben,
                         also vor allem umfassende Song-Epen und vokale Harmonien, experimentiert wird. Das ist die Stelle in ihrer Karriere, die sie
                         bis in die 90er geprägt hat, es ist der "Raw" Queen Sound, wenn ich mich mal so weit aus dem Fenster lehnen dürfte. Also wenn
-                        man einen kleinen musikalischen Trip in die 70er unternehmen möchte und Rock-Pioniere bei der Arbeit hören will, ist man mit
+                        man einen kleinen musikalischen Trip in die 70er unternehmen möchte und Rock-Pioniere bei der Arbeit hören will, ist man bei
                         "Queen" und "Queen II" genau am richtigen Platz.
                     </p>
                     <figure>
-                        <img src="./images/guitar-2925274_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Queen Band">
+                        <img src="./images/guitar-2925274_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="E-Gitarre">
                         <figcaption> https://pixabay.com/de/photos/gitarre-e-gitarre-streichinstrument-2925274/</figcaption>
                     </figure>
                 </div>
 
                 <div class="col-12 col-md-6 p-3 flex-grow-2" id="section10" style="background-color: #20c997; color: white;">
                     <h3>Hip-Hop</h3>
-                    <a href="" target="_blank">
-                        <img src="" alt="" class="img-fluid mb-3">
-                    </a>
-                    <p> Mein aktuelles Lieblingsgenre dieser Drei. Ich könnte so viel zu einzelnen Künstler, aktuelle Fehden dieser und der 
+                    <p> Mein aktuelles Lieblingsgenre dieser Drei. Ich könnte so viel zu einzelnen Künstler, aktuellen Fehden dieser und der 
                         allgemeinen Kunst des Raps sagen, aber ich werde mich aufgrund der Länge dieser Sektionen hier nun mal etwas kürzer
                         halten. Es gibt im Hip-Hop überdurchschnittlich viele Underground Artists, von denen nicht wenige auch mal extreme
                         "Banger"-Titel hervorbringen. Wenn ich mir mal wen aus dieser Richtung aussuchen könnte, kann ich das Duo
@@ -411,7 +389,7 @@
                         bekommen ohne direkt abgeschreckt zu werden, bevor man dann in seine weiteren Opera magna eintaucht. Und das lohnt sich.
                     </p>
                     <figure>
-                        <img src="./images/man-1845432_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Queen Band">
+                        <img src="./images/man-1845432_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Mann rappt am Mikrofon">
                         <figcaption> https://pixabay.com/de/photos/mann-mikrofon-musik-musiker-1845432/</figcaption>
                     </figure>
 
@@ -426,13 +404,13 @@
                         interessanteren Genremischungen zwischen Pop und anderen Gebieten, wie Hip-Hop, führt. Wenn ich hier grob etwas Konkretes
                         empfehlen kann, würde ich die Musik des "alten" und "neuen" Elton John anführen. An Johns Diskografie kann man exemplarisch
                         die Entwicklung des Pop von seinen Anfängen bis zu dessen jetzigen Revolution und Neuzeit erkennen. Das hört man am besten,
-                        wenn man heutige Feature-Releases mit Dua Lipa oder Miley Cyrus direkt mit 50 Jahre alten noch sehr rock-inspirierten Alben,
+                        wenn man heutige Feature-Releases mit Dua Lipa oder Britney Spears direkt mit 50 Jahre alten noch sehr rock-inspirierten Alben,
                         wie "Goodbye Yellow Brick Road" vergleicht. Es ist also sehr aufschlussreich, diese beiden Aspekte von Elton John mal
                         miteinander zu mischen und im Mix zu hören, da man so nicht nur ikonische Pop- und Rocksongs zu Gehör bekommt, sondern auch
                         noch die direkten Kontraste von frühem und jetzigem Pop erkunden kann.
                     </p>
                     <figure>
-                        <img src="./images/guitarist-2530542_1280.jpg" alt="Queen Band">
+                        <img src="./images/guitarist-2530542_1280.jpg" alt="Mann singt mit Gitarre">
                         <figcaption> https://pixabay.com/de/photos/gitarrist-s%C3%A4nger-band-rock-n-roll-2530542/</figcaption>
                     </figure>
                 </div>
@@ -462,7 +440,7 @@
             einer Website durchführe. Achso ja, und danke dir fürs Lesen! :)
         </p>
         <figure>
-            <img src="./images/garden-2040714_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Schrebergarten">
+            <img src="./images/garden-2040714_1280.jpg" class="img-fluid rounded mx-auto d-block" alt="Majestätischer Schlossgarten">
             <figcaption>https://pixabay.com/de/photos/garten-park-schloss-landschaftsbau-2040714/</figcaption>
         </figure>
     </section>
