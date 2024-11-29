@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Test</title>
-    <!-- Bootstrap CSS einbinden -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Zusätzliche Stile für klare Unterscheidbarkeit */
-        #section1 { background-color: #007bff; color: white; }
+    <style>      
+        .navbar {
+        z-index: 1050;
+        }
+
+        .carousel-inner img {
+        max-height: 500px; 
+        object-fit: cover;
+        }
+
+        #section1 { background-color: #000000; color: white; }
         #section2 { background-color: #ffc107; color: black; }
         #section3 { background-color: #28a745; color: white; }
         #section4 { background-color: #dc3545; color: white; }
-        #section5 { background-color: #17a2b8; color: white; }
+        #section5 { background-color: #40def7; color: black; }
         #section6 { background-color: #f8f9fa; color: black; }
         #section7 { background-color: #343a40; color: white; }
         #section8 { background-color: #6f42c1; color: white; }
@@ -23,33 +30,29 @@
 
         #section8 .row {
             display: flex;
-            align-items: stretch; /* Sorgt dafür, dass alle Abschnitte die gleiche Höhe haben */
+            align-items: stretch;
         }
 
         #section9, #section11 {
-            flex: 1 1 27,5%; /* Rock und Pop nehmen weniger Platz ein */
+            flex: 1 1 27,5%;
         }
 
         #section10 {
-            flex: 2 1 45%; /* Hip-Hop nimmt doppelt so viel Platz ein wie Rock oder Pop */
+            flex: 2 1 45%;
         }
 
     </style>
 </head>
 <body>
-    <!-- Button zum Öffnen der Sidebar -->
     <nav class="navbar navbar-light bg-light position-sticky top-0">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Meine Webseite</a>
-    
-            <!-- Off-Canvas Toggler -->
+            <a class="navbar-brand" href="#">Wer ist Erik?</a>
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 Menü
             </button>
         </div>
     </nav>
     
-    <!-- Off-Canvas Navigation -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navigation</h5>
@@ -98,12 +101,22 @@
     </div>
 
     <div class="content">
-    <!-- Sektionen mit einzigartigen Stilen -->
     <section id="section1" class="p-5 text-center">
         <h1>Willkommen auf meiner Webseite!</h1>
         <p> Diese Seite ist im Kontext des Moduls "Multimediale Webprogrammierung" im 5. Fachsemester des Informatik Bachelor Studiums
-            an der HTWK Leipzig entstanden. Hierbei handelt es sich um einen One-Pager, welcher mit Bootstrap implementiert worde.
-            -weitere technische Fakten folgen-
+            an der HTWK Leipzig entstanden. Hierbei handelt es sich um einen One-Pager, in welchem ich viel zu viele Informationen,
+            Erlebnisse und Ereignisse meines Lebens beschreibe und mit Bootstrap-Techniken darstelle. Ich werde diesen ersten Abschnitt
+            einmal verwenden, um nennenswerte Implementationen auf dieser Seite zu beleuchten und zu erläutern.<br>
+            Falls dein Bildschirm groß genug ist, kannst du dir aus dem Navigationsmenü oben direkt ein Thema aussuchen, zu welchem du
+            hinscrollen möchtest. Bei kleineren und mobilen Ansichten findest du oben rechts einen Button, der nach Anklicken das gleiche
+            Navigationsmenü aufklappt (<a href="https://getbootstrap.com/docs/5.3/components/offcanvas/" target="_blank">offcanvas</a>), aus welchem du
+            wählen kannst. Das Menü kann dann mit einem Klick auf einen anderen Ort der Seite oder auf das Kreuz wieder geschlossen werden.
+            Die einzelnen Abschnitte sind meist durch section-Elemente implementiert, dessen Inhalt durch die Bootstrap Klasse p-5 text-center
+            dargestellt werden. Im hierauf folgenden Abschnitt ist testweise auch ein minimales Beispiel der
+            <a href="https://getbootstrap.com/docs/5.3/components/carousel/#how-it-works" target="_blank">Carousel-Funktion</a> von Bootstrap mit
+            zwei Bildern implementiert.
+            In einer späteren Sektion <a href="#section8">Musikempfehlungen</a> wird Bootstraps Grid-System genutzt, um mehrere Sektionen
+            in einem Art Layout darzustellen (<a href="https://getbootstrap.com/docs/5.3/layout/grid/#grid-options" target="_blank">Grid system</a>).
         </p>
     </section>
 
@@ -123,6 +136,31 @@
             Eine Sache ist jedoch sicher: In der Hardware-Branche kann man Gutes Geld machen, was es wahrscheinlich zu einem der Hauptgründe
             macht, warum die politische Richtung des Kommunismus mit jedem vergangenen Tag im Hardwarelabor immer freundlicher erscheint.
         </p>
+
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Bild 1"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Bild 2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/source-4280758_1280.jpg" class="d-block img-fluid mx-auto" alt="Bild 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/binary-2450152_1280.jpg" class="d-block img-fluid mx-auto" alt="Bild 2">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Vorheriges</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Nächstes</span>
+            </button>
+        </div>
     </section>
 
     <section id="section3" class="p-5 text-center">
@@ -164,7 +202,8 @@
             gehört, aber ein richtiges Interesse war nie wirklich da. Bis zur Oberstufe. Nachdem ich meine Musiklehrerin multiple Male enttäuscht
             haben muss, sie hat mir empfohlen dem Schulchor beizutreten, und dann auch noch Musik für die Abiturjahre abgewählt habe, alle meine
             Freunde wählten Kunst, kam in mir, glaube ich, ein kleines Gefühl der Reue auf. Ich fing an sehr viel mehr Songs zu hören und das aus
-            den unterschiedlichsten Genres. Bei Hip-Hop-Songs wurden Reimschemas ermittelt und eigene Texte geschrieben, Rock und Metal haben mich
+            den unterschiedlichsten Genres. Weiter <a href="#section8">unten</a> auf dieser Seite findet man auch meine derzeitigen Lieblingsgenres und persönliche
+            Empfehlungen, wen es interessiert. Bei Hip-Hop-Songs wurden Reimschemas ermittelt und eigene Texte geschrieben, Rock und Metal haben mich
             inspiriert, mir eine Gitarre und später auch einen Bass zuzulegen, die mich während meiner Prüfungen vielleicht auch etwas vom Lernen
             abgehalten haben, und ich habe mehrfach in der Woche versucht, Töne zu treffen, an die wahrscheinlich nur Freddy Mercury herankommen
             würde. Ich frage mich häufig, ob, wenn ich eher angefangen hätte, Musik mehr in mein Leben einfließen zu lassen, ich es vielleicht
@@ -214,7 +253,6 @@
             (Da ich mich doch ganz schön verausgabt habe, habe ich nochmal in 3 Sektionen nach den jeweiligen Musikrichtungen unterteilt)
         </p>
 
-        <!-- Bootstrap Grid -->
         <div class="container">
             <div class="row d-flex">
                 <!-- Rock -->
@@ -239,7 +277,9 @@
                 <!-- Hip-Hop -->
                 <div class="col-12 col-md-6 p-3 flex-grow-2" id="section10" style="background-color: #20c997; color: white;">
                     <h3>Hip-Hop</h3>
-                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/Chromakopia_CD_cover.jpg" alt="Chromakopia-Album-Cover" class="img-fluid mb-3">
+                    <a href="" target="_blank">
+                        <img src="" alt="" class="img-fluid mb-3">
+                    </a>
                     <p> Mein aktuelles Lieblingsgenre dieser Drei. Ich könnte so viel zu einzelnen Künstler, aktuelle Fehden dieser und der 
                         allgemeinen Kunst des Raps sagen, aber ich werde mich aufgrund der Länge dieser Sektionen hier nun mal etwas kürzer
                         halten. Es gibt im Hip-Hop überdurchschnittlich viele Underground Artists, von denen nicht wenige auch mal extreme
@@ -311,7 +351,6 @@
             </p>
     </section>
     </div>
-    <!-- Bootstrap JS und Popper.js einbinden -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
